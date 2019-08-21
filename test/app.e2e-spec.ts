@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 import { AppModule } from './../src/app.module';
 
-describe('AppController (e2e)', () => {
+describe('CatsController (e2e)', () => {
   let app;
 
   beforeEach(async () => {
@@ -14,10 +14,10 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('GET /cats/1 should return findOne message', () => {
     return request(app.getHttpServer())
-      .get('/')
+      .get('/cats/1')
       .expect(200)
-      .expect('Hello World!');
+      .expect('This action returns a #1 cat');
   });
 });
