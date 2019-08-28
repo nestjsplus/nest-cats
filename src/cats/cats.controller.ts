@@ -28,7 +28,7 @@ import { LoggingInterceptor } from '../common/interceptors/logging.interceptor';
 import { TransformInterceptor } from '../common/interceptors/transform.interceptor';
 import { AuthGuard } from '@nestjs/passport';
 
-@UseFilters(HttpExceptionFilter)
+// @UseFilters(HttpExceptionFilter)
 @UseInterceptors(LoggingInterceptor, TransformInterceptor)
 @Controller('cats')
 export class CatsController {
