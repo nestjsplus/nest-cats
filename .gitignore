@@ -1,6 +1,3 @@
-# angular app
-/app/*
-
 # compiled output
 /dist
 /node_modules
